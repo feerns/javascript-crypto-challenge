@@ -3,10 +3,6 @@ const _sodium = require('libsodium-wrappers');
 
 var signatureKey =  null;
 
-beforeAll(async ()=> {
-    await _sodium.ready
-})
-
 //set decryption key
 module.exports.setKey = async function (key)
 {

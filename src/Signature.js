@@ -2,10 +2,10 @@
 const _sodium = require('libsodium-wrappers');
 var signatureKey = null;
 
-beforeAll(async() => {
+(async() => {
     await _sodium.ready;
     signatureKey = _sodium.crypto_sign_keypair();
-});
+})();
 
 //Returns a signed msg with a key
 module.exports.sign = async function(msg)
